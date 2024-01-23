@@ -1,11 +1,5 @@
 const personAge = 18;
-let isAdult;
-
-if (personAge >= 18) {
-    isAdult = true;
-} else {
-    isAdult = false;
-}
+const isAdult = personAge >= 18;
 
 console.log(personAge);
 console.log(`Adult person: ${isAdult}`);
