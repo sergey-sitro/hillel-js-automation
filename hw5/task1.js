@@ -1,16 +1,16 @@
 // Function declaration
-function rectangleAreaFD(width, height) {
+function calculateRectangleAreaFD(width, height) {
     return width * height;
 }
 
 // Function expression
-const rectangleAreaFE = function (width, height) {
+const calculateRectangleAreaFE = function (width, height) {
     return width * height;
 };
 
 // Arrow function
-const rectangleAreaAF = (width, height) => width * height;
+const calculateRectangleAreaAF = (width, height) => width * height;
 
-console.log(rectangleAreaFD(5, 10));
-console.log(rectangleAreaFE(5, 10));
-console.log(rectangleAreaAF(5, 10));
+console.log(calculateRectangleAreaFD(5, 10));
+console.log(calculateRectangleAreaFE(5, 10));
+console.log(calculateRectangleAreaAF(5, 10));
