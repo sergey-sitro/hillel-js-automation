@@ -1,7 +1,8 @@
 function divide(numerator, denominator) {
     if (denominator === 0) {
         throw new Error('Denominator equals 0!');
-    } else if (typeof numerator !== 'number' || typeof denominator !== 'number') {
+    }
+    if (typeof numerator !== 'number' || typeof denominator !== 'number') {
         throw new Error('One of arguments is not a number!');
     }
     return numerator / denominator;

@@ -3,9 +3,9 @@ const handleOdd = () => { console.log('Number is odd') };
 
 function handleNum(num, evenFunc, oddFunc) {
     if (num % 2 === 0) {
-        evenFunc(num);
+        evenFunc();
     } else if (num % 2 === 1) {
-        oddFunc(num);
+        oddFunc();
     }
 }
 
