@@ -14,7 +14,6 @@ for (let i = 0; i < numbers.length; i++) {
     }
     if (numbers[i] < 0) {
         negativeCount += 1;
-        continue
     }
 }
 
