@@ -49,8 +49,10 @@ class Book {
     }
 
     static getOldestBook(books) {
-        const sortedBooks = structuredClone(books).sort((a,b) => a._year - b._year);
-        return sortedBooks[0];
+        const oldestBook = books.reduce((oldest, current) => {
+            return oldest.year < current.year ? oldest : current;
+        });
+        return oldestBook;
     }
 }
 
