@@ -1,4 +1,4 @@
-const strVar = "string variable";
+const strVar = 'string variable';
 console.log(strVar);
 
 const numVar = 10;

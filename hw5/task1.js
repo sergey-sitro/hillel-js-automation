@@ -1,11 +1,12 @@
 // Function declaration
 function calculateRectangleAreaFD(width, height) {
-    return width * height;
+  return width * height;
 }
 
 // Function expression
+// eslint-disable-next-line func-names
 const calculateRectangleAreaFE = function (width, height) {
-    return width * height;
+  return width * height;
 };
 
 // Arrow function

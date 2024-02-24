@@ -1,59 +1,58 @@
 class Book {
-    constructor(title, author, year) {
-        this._title = title;
-        this._author = author;
-        this._year = year;
+  constructor(title, author, year) {
+    this._title = title;
+    this._author = author;
+    this._year = year;
+  }
+
+  get title() {
+    return this._title;
+  }
+
+  set title(val) {
+    if (typeof val !== 'string' || val.length === 0) {
+      console.warn('Invalid book title');
+      return;
     }
 
-    get title() {
-        return this._title;
+    this._title = val;
+  }
+
+  get author() {
+    return this._author;
+  }
+
+  set author(val) {
+    if (typeof val !== 'string' || val.length === 0) {
+      console.warn('Invalid book author');
+      return;
     }
 
-    set title(val) {
-        if (typeof val !== 'string' || val.length === 0) {
-            console.warn('Invalid book title');
-            return
-        }
+    this._author = val;
+  }
 
-        this._title = val;
+  get year() {
+    return this._year;
+  }
+
+  set year(val) {
+    if (typeof val !== 'number' || val < 0) {
+      console.warn('Invalid book year');
+      return;
     }
 
-    get author() {
-        return this._author;
-    }
+    this._year = val;
+  }
 
-    set author(val) {
-        if (typeof val !== 'string' || val.length === 0) {
-            console.warn('Invalid book author');
-            return
-        }
+  getInfo() {
+    console.log(`Title: ${this._title}\nAuthor: ${this._author}\nYear: ${this._year}`);
+  }
 
-        this._author = val;
-    }
-
-    get year() {
-        return this._year;
-    }
-
-    set year(val) {
-        if (typeof val !== 'number' || val < 0) {
-            console.warn('Invalid book year');
-            return
-        }
-
-        this._year = val;
-    }
-
-    getInfo() {
-        console.log(`Title: ${this._title}\nAuthor: ${this._author}\nYear: ${this._year}`);
-    }
-
-    static getOldestBook(books) {
-        const oldestBook = books.reduce((oldest, current) => {
-            return oldest.year < current.year ? oldest : current;
-        });
-        return oldestBook;
-    }
+  static getOldestBook(books) {
+    const oldestBook = books
+      .reduce((oldest, current) => (oldest.year < current.year ? oldest : current));
+    return oldestBook;
+  }
 }
 
-export default Book
+export default Book;
